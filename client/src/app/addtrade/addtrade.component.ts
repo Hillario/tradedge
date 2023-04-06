@@ -2,11 +2,12 @@ import { Component, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-addtrade',
+  templateUrl: './addtrade.component.html',
+  styleUrls: ['./addtrade.component.scss']
 })
-export class AppComponent implements OnDestroy {
+export class AddtradeComponent implements OnDestroy {
+
   title = 'Tradedge';
 
   mobileQuery: MediaQueryList;
@@ -22,4 +23,5 @@ export class AppComponent implements OnDestroy {
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
+
 }
