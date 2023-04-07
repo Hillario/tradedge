@@ -1,32 +1,27 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
 
-  <mat-toolbar color="primary">
+  <mat-toolbar color="primary" class="example-toolbar">
     <button mat-icon-button class="example-icon" (click)="snav.toggle()" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
     <span>{{title}}</span>
     <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
   </mat-toolbar>
 
-  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-      <mat-nav-list>
-        <a mat-list-item routerLink="/">Home</a>
-        <a mat-list-item routerLink="/addtrade">AddTrade</a>
-      </mat-nav-list>
-    </mat-sidenav>
+  <mat-sidenav-container class="example-sidenav-container"
+  [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+<mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+[fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+<mat-nav-list>
+<a mat-list-item routerLink="/">Home</a>
+<a mat-list-item routerLink="/addtrade">AddTrade</a>
+</mat-nav-list>
+</mat-sidenav>
 
-    <mat-sidenav-content>
-      <!--Content Here-->
-      <P>Table Goes Here</P>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+<mat-sidenav-content>
+  <router-outlet></router-outlet>
+</mat-sidenav-content>
+</mat-sidenav-container>
 </div>
-<router-outlet></router-outlet>
+
 

@@ -10,11 +10,13 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { AddtradeComponent } from './addtrade/addtrade.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddtradeComponent
+    AddtradeComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
