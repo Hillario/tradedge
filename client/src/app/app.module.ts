@@ -11,6 +11,12 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { AddtradeComponent } from './addtrade/addtrade.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
