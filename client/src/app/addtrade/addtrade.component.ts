@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import {FormControl, Validators} from '@angular/forms';
 
 
 @Component({
@@ -7,6 +8,5 @@ import { Component} from '@angular/core';
   styleUrls: ['./addtrade.component.scss']
 })
 export class AddtradeComponent{
-
-
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 }
