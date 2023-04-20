@@ -13,3 +13,14 @@
   justify-content: center;
   padding-top: 5%;
 }
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+  padding-bottom: 10%;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+

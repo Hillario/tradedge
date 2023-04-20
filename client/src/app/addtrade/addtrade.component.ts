@@ -8,5 +8,14 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./addtrade.component.scss']
 })
 export class AddtradeComponent{
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  numFormControl = new FormControl('', [Validators.required]);
+  myStake: number | any;
+  myPayout: number | any;
+  myRuns: number | any;
+  myLost: number | any;
+  myWon: number | any;
+  myProfit: number | any;
+  myStart: string | any;
+  myEnd: string | any;
+
 }
