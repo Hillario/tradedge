@@ -1,8 +1,8 @@
 <div class="container">
-  <form class="example-form">
+  <form class="example-form" (ngSubmit)="submitForm()" [formGroup]="myForm">
     <mat-form-field class="example-full-width">
       <mat-label>Stake</mat-label>
-      <input type="number" [value]="myStake | number:'1.2-2'" matInput [formControl]="numFormControl" placeholder="Ex. 133.33">
+      <input type="number" formControlName="myStake" [value]="myStake | number:'1.2-2'" matInput [formControl]="numFormControl" placeholder="Ex. 133.33">
       <mat-error *ngIf="numFormControl.hasError('number') && !numFormControl.hasError('required')">
         Please enter the total stake
       </mat-error>
@@ -12,7 +12,7 @@
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Payout</mat-label>
-      <input type="number" [value]="myPayout | number:'1.2-2'" matInput [formControl]="numFormControl" placeholder="Ex. 133.33">
+      <input type="number" formControlName="myPayout" [value]="myPayout | number:'1.2-2'" matInput [formControl]="numFormControl" placeholder="Ex. 133.33">
       <mat-error *ngIf="numFormControl.hasError('number') && !numFormControl.hasError('required')">
         Please enter the total payout
       </mat-error>
@@ -22,7 +22,7 @@
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Runs</mat-label>
-      <input type="number" [value]="myRuns | number:'1.2-2'" matInput [formControl]="numFormControl" placeholder="Ex. 133.33">
+      <input type="number" formControlName="myRuns" [value]="myRuns | number:'1.2-2'" matInput [formControl]="numFormControl" placeholder="Ex. 133.33">
       <mat-error *ngIf="numFormControl.hasError('number') && !numFormControl.hasError('required')">
         Please enter the total runs
       </mat-error>
@@ -32,7 +32,7 @@
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Lost</mat-label>
-      <input type="number" [value]="myLost | number:'1.2-2'" matInput [formControl]="numFormControl" placeholder="Ex. 133.00">
+      <input type="number" formControlName="myLost" [value]="myLost | number:'1.2-2'" matInput [formControl]="numFormControl" placeholder="Ex. 133.00">
       <mat-error *ngIf="numFormControl.hasError('number') && !numFormControl.hasError('required')">
         Please enter the lost trades
       </mat-error>
@@ -42,7 +42,7 @@
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Won</mat-label>
-      <input type="number" [value]="myWon | number:'1.2-2'" matInput [formControl]="numFormControl" placeholder="Ex. 133.00">
+      <input type="number" formControlName="myWon" [value]="myWon | number:'1.2-2'" matInput [formControl]="numFormControl" placeholder="Ex. 133.00">
       <mat-error *ngIf="numFormControl.hasError('number') && !numFormControl.hasError('required')">
         Please enter the won trades
       </mat-error>
@@ -52,7 +52,7 @@
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Profit</mat-label>
-      <input type="number" [value]="myProfit | number:'1.2-2'" matInput [formControl]="numFormControl" placeholder="Ex. 133.33">
+      <input type="number" formControlName="myProfit" [value]="myProfit | number:'1.2-2'" matInput [formControl]="numFormControl" placeholder="Ex. 133.33">
       <mat-error *ngIf="numFormControl.hasError('number') && !numFormControl.hasError('required')">
         Please enter the total profit
       </mat-error>
@@ -62,7 +62,7 @@
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Start</mat-label>
-      <input type="text" [value]="myStart" matInput [formControl]="numFormControl" placeholder="Ex. 20/04/23:1337">
+      <input type="text" formControlName="myStart" [value]="myStart" matInput [formControl]="numFormControl" placeholder="Ex. 20/04/23:1337">
       <mat-error *ngIf="numFormControl.hasError('number') && !numFormControl.hasError('required')">
         Please enter the start time
       </mat-error>
@@ -72,7 +72,7 @@
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>End</mat-label>
-      <input type="text" [value]="myEnd" matInput [formControl]="numFormControl" placeholder="Ex. 20/04/23:1337">
+      <input type="text" formControlName="myEnd" [value]="myEnd" matInput [formControl]="numFormControl" placeholder="Ex. 20/04/23:1337">
       <mat-error *ngIf="numFormControl.hasError('number') && !numFormControl.hasError('required')">
         Please enter the end time
       </mat-error>
@@ -81,7 +81,7 @@
       </mat-error>
     </mat-form-field>
     <div class="example-button-row">
-      <button mat-raised-button color="primary">Add</button>
+      <button type="submit" mat-raised-button color="primary">Add</button>
       <button mat-raised-button color="accent">Cancel</button>
     </div>
   </form>
